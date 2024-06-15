@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CheckOnArrivalBeforeDeparture implements Filter {
+    public CheckOnArrivalBeforeDeparture() {
+    }
+
     /**
      * метод исключает из Полета сегменты, у которых дата прилета раньше даты вылета
      * @param list
@@ -12,6 +15,7 @@ public class CheckOnArrivalBeforeDeparture implements Filter {
      */
     @Override
     public List<Flight> filter(List<Flight> list) {
+
 
         List<Flight> flightList = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
