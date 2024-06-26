@@ -39,8 +39,8 @@ public class CheckOnDepartureBeforeNow implements Filter {
             }
 
             if (j==size1) {
-                Flight flight = new Flight(listSegment);
-                flightList.add(flight);
+
+                flightList.add(list.get(i));
             }
         }
         return flightList;

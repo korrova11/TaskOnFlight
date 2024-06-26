@@ -26,8 +26,8 @@ public class CheckOnArrivalBeforeDeparture implements Filter {
                             s.getDepartureDate().isBefore(s.getArrivalDate()))
                     .collect(Collectors.toList());
             if (listSegment1.size()==size) {
-                Flight flight = new Flight(listSegment);
-                flightList.add(flight);
+               // Flight flight = new Flight(listSegment);
+                flightList.add(list.get(i));
             }}
         return flightList;
 
