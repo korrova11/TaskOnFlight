@@ -1,15 +1,14 @@
 package com.gridnine.testing;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilterTest {
-    private final CheckOnArrivalBeforeDeparture check1 = new CheckOnArrivalBeforeDeparture();
+public class CheckOnArrivalBeforeDepartureTest {
+    private final CheckOnArrivalBeforeDeparture check = new CheckOnArrivalBeforeDeparture();
 
 
     LocalDateTime now = LocalDateTime.now();
@@ -28,9 +27,9 @@ public class FilterTest {
     List<Flight> flightList2 = new ArrayList<>(List.of(flight2));
 
     @Test
-    public void filter1() {
+    public void filterTest() {
 
-        Assertions.assertTrue(check1.filter(flightList1).size() == 1);
-        Assertions.assertEquals(flightList2, check1.filter(flightList1));
+        Assertions.assertTrue(check.filter(flightList1).size() == 1);
+        Assertions.assertEquals(flightList2, check.filter(flightList1));
     }
 }
