@@ -6,25 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CheckOnDepartureBeforeNow implements Filter {
-   /* @Override
 
-    public List<Flight> filter1(List<Flight> list) {
-
-        List<Flight> flightList = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            ArrayList<Segment> listSegment = (ArrayList<Segment>) list.get(i).getSegments().stream()
-                    .filter(s ->
-                            s.getDepartureDate().isAfter(LocalDateTime.now()))
-                    .collect(Collectors.toList());
-            if (!listSegment.isEmpty()) {
-                Flight flight = new Flight(listSegment);
-                flightList.add(flight);
-            }
-        }
-        return flightList;
-
-    }
-*/
     @Override
 
     public List<Flight> filter(List<Flight> list) {
@@ -39,8 +21,8 @@ public class CheckOnDepartureBeforeNow implements Filter {
             }
 
             if (j==size1) {
-                Flight flight = new Flight(listSegment);
-                flightList.add(flight);
+
+                flightList.add(list.get(i));
             }
         }
         return flightList;
